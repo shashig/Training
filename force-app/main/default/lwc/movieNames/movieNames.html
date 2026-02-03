@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="Movies">
+      <div class="slds-var-m-around_medium">
+        <template lwc:if={moviesResponse.data}>
+            <template for:each={moviesResponse.data} for:item="movie">
+                <p key={movie.Id}>{movie.Name} - {movie.Release_Date__c}</p>
+            </template>
+        </template>
+        <template lwc:elseif={moviesResponse.error}>
+            <!-- <c-error-panel errors={moviesRe.error}></c-error-panel> -->
+             There was an error
+        </template>
+      </div>
+    </lightning-card>
+</template>

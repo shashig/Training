@@ -1,0 +1,1 @@
+select Name, Id, Release_Date__c from Movie__c
