@@ -1,0 +1,5 @@
+
+select Id, Artist__r.Name, Character__c, Job__c, Artist__r.Profile_Path__c, RecordType.Name
+  from Movie_Artist__c
+ where Movie__c = 'a00dN00000KPyXxQAL'
+  limit 10
