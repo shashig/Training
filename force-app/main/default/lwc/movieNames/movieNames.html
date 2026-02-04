@@ -1,9 +1,15 @@
 <template>
     <lightning-card title="Movies">
       <div class="slds-var-m-around_medium">
+        Record Id: {recordId}
         <template lwc:if={movieArtistsResponse.data}>
             <template for:each={movieArtistsResponse.data} for:item="movieArtist">
                 <p key={movieArtist.Id}>{movieArtist.Artist__r.Name} </p>
+            </template>
+        </template>
+        <template lwc:if={movieArtistsResponse.data}>
+            <template for:each={displayRecs} for:item="dr">
+                <p key={dr}>{dr} </p>
             </template>
         </template>
         <template lwc:elseif={movieArtistsResponse.error}>
